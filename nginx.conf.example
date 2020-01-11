@@ -1,0 +1,25 @@
+worker_processes auto;
+rtmp_auto_push on;
+events {}
+rtmp {
+    server {
+        listen 1935;
+        listen [::]:1935 ipv6only=on;
+
+        application stream {
+            live on;
+            record off;
+            
+            # Push to Facebook Live
+            # push rtmp://localhost:19350/rtmp/<facebook live api key>;
+            # 
+            
+            # YouTube Live
+            # push rtmp://a.rtmp.youtube.com/<rest if link from YouTube dashboard>;
+            # 
+            
+        }
+    }
+}
+
+

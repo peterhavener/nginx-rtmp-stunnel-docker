@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nginx-rtmp-stunnel:
+    image: havenerd/nginx-rtmp-stunnel
+    container_name: nginx-rtmp-stunnel
+    networks:
+      - nginx-rtmp-backend
+    ports:
+      - 1935:1935
+    volumes:
+      - /docker_volumes/nginx-rtmp/etc/nginx/conf:/etc/nginx:ro
+      - /docker_volumes/nginx-rtmp/etc/stunnel:/etc/stunnel
+
+networks:
+  nginx-rtmp-backend:
+    external:
+      name: nginx-rtmp-backend
