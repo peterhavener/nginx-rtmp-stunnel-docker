@@ -4,7 +4,7 @@
 
 # from tinagolo/nginx-rtmp
 
-FROM buildpack-deps:buster
+FROM buildpack-deps:stretch
 
 LABEL maintainer="Peter Havener <peter.havener@gmail.com>"
 
