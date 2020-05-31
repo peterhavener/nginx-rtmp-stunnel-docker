@@ -4,12 +4,12 @@
 
 # from tinagolo/nginx-rtmp
 
-FROM buildpack-deps:stretch
+FROM buildpack-deps:buster
 
-LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
+LABEL maintainer="Peter Havener <peter.havener@gmail.com>"
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.15.0
+ENV NGINX_VERSION nginx-1.18.0
 ENV NGINX_RTMP_MODULE_VERSION 1.2.1
 
 # Install dependencies

@@ -10,6 +10,7 @@ services:
     volumes:
       - /docker_volumes/nginx-rtmp/etc/nginx/conf:/etc/nginx:ro
       - /docker_volumes/nginx-rtmp/etc/stunnel:/etc/stunnel
+    restart: unless-stopped
 
 networks:
   nginx-rtmp-backend:
